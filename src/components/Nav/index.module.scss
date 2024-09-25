@@ -1,0 +1,24 @@
+.nav {
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        line-height: 21px;
+
+        li {
+            margin-right: 30px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 400;
+            text-align: center;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+
+}
