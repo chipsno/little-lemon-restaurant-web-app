@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 57px;
+    // margin-top: 15px;
+
+    .header-logo {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        padding: 10px 150px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 10px 20px;
+    }
+}

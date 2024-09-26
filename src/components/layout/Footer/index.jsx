@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import footerLogo from '../../assets/images/footerLogo.png'
+import footerLogo from '../../../assets/images/footerLogo.png'
 
 import styles from './index.module.scss'
 
@@ -12,7 +12,7 @@ export default function Footer() {
         <img src={footerLogo} alt="little lemon footer logo" />
       </div>
       <div className={styles["footer-links-wrapper"]}>
-        <div className={styles["footer-links-container"]}>
+        <div className={styles["footer-nav-container"]}>
           <div>Doormat Navigation</div>
           <ul>
             <li><a href='/'>Home</a></li>
@@ -23,7 +23,7 @@ export default function Footer() {
             <li><a href='/'>Login</a></li>
           </ul>
         </div>
-        <div className={styles["footer-links-container"]}>
+        <div className={styles["footer-contact-container"]}>
           <div>Contacts</div>
           <ul>
             <li><a href='/'>Address</a></li>
@@ -31,7 +31,7 @@ export default function Footer() {
             <li><a href='/'>Email</a></li>
           </ul>
         </div>
-        <div className={styles["footer-links-container"]}>
+        <div className={styles["footer-social-container"]}>
           <div>Social Media Links</div>
           <ul>
             <li><a href='/'>Address</a></li>

@@ -6,7 +6,6 @@
 
     box-sizing: border-box;
     padding: 100px 150px;
-    height: 493px;
 
     /* Primary Green */
     background: #495E57;
@@ -51,7 +50,35 @@
             }
         }
 
+        &>div {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
     }
 
 }
 
+@media (max-width: 915px) {
+    .footer {
+        // flex-direction: column;
+        padding: 20px 30px;
+
+        .footer-links-wrapper {
+            flex-direction: column;
+            ul {
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 715px) {
+    .footer {
+        flex-direction: column;
+    }
+}
