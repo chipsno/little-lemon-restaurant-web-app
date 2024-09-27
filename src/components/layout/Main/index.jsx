@@ -1,11 +1,9 @@
 import React from 'react'
 
-import Home from '../../../pages/Home'
-
-export default function Main() {
+export default function Main({ children} ) {
   return (
     <main>
-      <Home />
+      {children}
     </main>
   )
 }

@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 
 export default function About() {
   return (
-    <section className={styles['section-wrapper']}>
+    <section id="about" className={styles['section-wrapper']}>
       <div className={styles['section-container']}>
         <div className={styles['our-story-content']}>
           <h2>Our Story</h2>

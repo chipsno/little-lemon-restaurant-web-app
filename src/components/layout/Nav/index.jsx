@@ -1,4 +1,6 @@
 import React from 'react'
+// import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 import { Dropdown } from 'antd';
 import { MenuOutlined, HomeOutlined, InfoCircleOutlined, ContainerOutlined, ScheduleOutlined, ThunderboltOutlined, LoginOutlined } from '@ant-design/icons';
@@ -11,31 +13,37 @@ export default function Nav() {
       key: "home",
       value: "Home",
       icon: <HomeOutlined />,
+      to: "/",
     },
     {
       key: "about",
       value: "About",
       icon: <InfoCircleOutlined />,
+      to: "/#about",
     },
     {
       key: "menu",
       value: "Menu",
       icon: <ContainerOutlined />,
+      to: "/#menu",
     },
     {
       key: "reservations",
       value: "Reservations",
       icon: <ScheduleOutlined />,
+      to: "/booking",
     },
     {
       key: "order-online",
       value: "Order Online",
       icon: <ThunderboltOutlined />,
+      to: "/order",
     },
     {
       key: "login",
       value: "Login",
       icon: <LoginOutlined />,
+      to: "/login",
     },
 
   ]
@@ -50,7 +58,7 @@ export default function Nav() {
               return {
                   key: item.key,
                   label: (
-                    <a href="/">{item.icon} {item.value}</a>
+                    <HashLink to={item.to}>{item.icon} {item.value}</HashLink>
                   )
                 }
             }),
@@ -63,7 +71,7 @@ export default function Nav() {
       <ul className={styles["nav-pc"]}>
         {
           navMemuItems.map(item =>
-            <li key={item.key}><a href="/">{item.value}</a></li>
+            <li key={item.key}><HashLink to={item.to}>{item.value}</HashLink></li>
           )
         }
       </ul>

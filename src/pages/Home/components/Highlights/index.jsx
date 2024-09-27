@@ -1,10 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
+import {
+  Button,
+} from 'antd';
 
 import DishCard from './DishCard'
 
 import styles from './index.module.scss'
 
 export default function Highlights() {
+  const navigate = useNavigate();
+
   const dishes = [
     {
       title: "Greek Salad",
@@ -31,13 +38,16 @@ export default function Highlights() {
   ];
 
   return (
-    <section className={styles['section-wrapper']}>
+    <section id="menu" className={styles['section-wrapper']}>
       <div className={styles['section-container']}>
         <div className={styles['highlights-header']}>
           <h2>This week specials!</h2>
-          <button className={`${styles['menu-btn']} ${styles['button-primary']}`}>
+          <Button type="default" className={`${styles['menu-btn']} ${styles["button-primary"]}`} onClick={
+            () => navigate('/order')
+          }
+          >
             Online Menu
-          </button>
+          </Button>
         </div>
         {
           dishes.map((dish, index) => (
