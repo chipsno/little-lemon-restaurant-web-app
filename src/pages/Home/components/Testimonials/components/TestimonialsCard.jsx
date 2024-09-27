@@ -23,7 +23,7 @@ export default function TestimonialsCard(props) {
               ratingPoint === 1 ? (
                 <StarFilled key={idx} />
               ) : ratingPoint === 0.5 ? (
-                <HalfColorStar leftColor="#f4ce14"/>
+                <HalfColorStar key={idx} leftColor="#f4ce14"/>
               ) : ratingPoint === 0 ? (
                 <StarFilled key={idx} />
               ) : null
