@@ -49,7 +49,7 @@ export default function Nav() {
   ]
 
   return (
-    <nav className={styles["nav"]}>
+    <nav className={styles["nav"]} aria-label="nav area">
 
       <div className={styles["nav-mobile"]}>
         <Dropdown

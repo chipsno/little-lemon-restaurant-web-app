@@ -25,8 +25,15 @@ export default function About() {
           </p>
         </div>
         <div className={styles['our-story-chefs']}>
-          <img src="/chefs-mario-and-adrian_1.jpg" alt="Chefs Mario and Adrian #1" />
-          <img src="/chefs-mario-and-adrian_2.jpg" alt="Chefs Mario and Adrian #2" />
+          <img
+            src="/chefs-mario-and-adrian_1.jpg"
+            alt="Chefs Mario and Adrian #1" 
+            aria-label="image of Chefs Mario and Adrian #1"/>
+          <img
+            src="/chefs-mario-and-adrian_2.jpg"
+            alt="Chefs Mario and Adrian #2" 
+            aria-label="image of Chefs Mario and Adrian #2"
+          />
         </div>
       </div>
     </section>

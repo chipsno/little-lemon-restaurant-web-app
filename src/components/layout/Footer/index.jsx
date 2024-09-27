@@ -7,7 +7,7 @@ import styles from './index.module.scss'
 
 export default function Footer() {
   return (
-    <footer className={styles["footer"]}>
+    <footer className={styles["footer"]} aria-label="footer area">
       <div className={styles["footer-logo-wrapper"]}>
         <img src={footerLogo} alt="little lemon footer logo" />
       </div>

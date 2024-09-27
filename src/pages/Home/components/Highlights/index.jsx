@@ -38,11 +38,11 @@ export default function Highlights() {
   ];
 
   return (
-    <section id="menu" className={styles['section-wrapper']}>
+    <section id="menu" className={styles['section-wrapper']} aria-label="highlight area">
       <div className={styles['section-container']}>
         <div className={styles['highlights-header']}>
           <h2>This week specials!</h2>
-          <Button type="default" className={`${styles['menu-btn']} ${styles["button-primary"]}`} onClick={
+          <Button type="default" className={`${styles['menu-btn']} ${styles["button-primary"]}`} aria-label="menu button" onClick={
             () => navigate('/order')
           }
           >

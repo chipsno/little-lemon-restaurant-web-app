@@ -8,7 +8,7 @@ export default function DishCard(props) {
     <div className={styles['dish-card-wrapper']}>
       <article className={styles['dish-card-container']}>
         <div className={styles['dish-card-image']}>
-          <img src={image} alt={title} />
+          <img src={image} alt={title} aria-label="image of dish" />
         </div>
         <div className={styles['dish-card-header']}>
           <h3>{title}</h3>

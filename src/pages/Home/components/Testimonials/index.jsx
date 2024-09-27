@@ -39,7 +39,7 @@ export default function Testimonials() {
 
   return (
 
-    <section className={styles['section-wrapper']}>
+    <section className={styles['section-wrapper']} aria-label="testimonials area">
       <div className={styles['section-container']}>
         <h2>Our customers love us!</h2>
         {

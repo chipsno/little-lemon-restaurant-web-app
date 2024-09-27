@@ -1,6 +1,12 @@
 import React from 'react'
 
+import { StarFilled } from '@ant-design/icons';
+
+import HalfColorStar from '../../../../../components/HalfColorStar';
+
 import styles from './TestimonialsCard.module.scss';
+
+
 
 export default function TestimonialsCard(props) {
 
@@ -9,19 +15,20 @@ export default function TestimonialsCard(props) {
   return (
     <div className={styles['testimonial-card-wrapper']}>
       <article className={styles['testimonial-card-container']}>
-        <img src={image} alt={customerName} />
+        <img src={image} alt={customerName} aria-label="picture of customer" />
         <h4>{customerName}</h4>
         <span>
-          {rating.map((ratingPoint, idx) =>
-            <span key={idx}>{ratingPoint}</span>
-            // ratingPoint === 1 ? (
-            //   <IoMdStar key={idx} />
-            // ) : ratingPoint === 0.5 ? (
-            //   <IoMdStarHalf key={idx} />
-            // ) : ratingPoint === 0 ? (
-            //   <IoMdStarOutline key={idx} />
-            // ) : null
-          )}
+          {
+            rating.map((ratingPoint, idx) =>
+              ratingPoint === 1 ? (
+                <StarFilled key={idx} />
+              ) : ratingPoint === 0.5 ? (
+                <HalfColorStar leftColor="#f4ce14"/>
+              ) : ratingPoint === 0 ? (
+                <StarFilled key={idx} />
+              ) : null
+            )
+          }
           <p>
             {rating.reduce(
               (accumulator, currentValue) => accumulator + currentValue,
